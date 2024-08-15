@@ -29,7 +29,7 @@ setlocal
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 
 :SwitchMusic
-echo Select a new song!
+echo Select a song!
 echo ---------------------------------------------------------------
 echo 1. Benevolence Messiah - Amethyst Pocket (Part I)
 echo 2. Blackmoore - ?
@@ -37,6 +37,7 @@ echo 3. Soundscape Oblivion - Lunar Voyagers
 echo 4. Ganja Lunar - Autumn Depression
 echo 5. HARI - ?
 echo 6. Blackmoore5050 and Benevolence Messiah - Hill Tops (Benevolence Messiah Remix)
+echo 7. ?
 echo S) Stop Audio
 echo C) Exit
 set /P option=Enter your choice:
@@ -127,7 +128,7 @@ goto SwitchMusic
 :option17
 cd Audio_Assets
 Taskkill  /F /IM wscript.exe
-set "file=Benevolence Messiah - Amethyst Pocket (Part I).flac"
+set "file=Blackmoore5050 and Benevolence Messiah - Hill Tops (Benvolence Messiah Remix).flac"
 ( echo Set Sound = CreateObject("WMPlayer.OCX.7"^)
   echo Sound.URL = "%file%"
   echo Sound.Controls.play
@@ -142,7 +143,7 @@ goto SwitchMusic
 :option18
 cd Audio_Assets
 Taskkill  /F /IM wscript.exe
-set "file=Blackmoore5050 and Benevolence Messiah - Hill Tops (Benvolence Messiah Remix).flac"
+set "file=Benevolence Messiah - Amethyst Pocket (Part I).flac"
 ( echo Set Sound = CreateObject("WMPlayer.OCX.7"^)
   echo Sound.URL = "%file%"
   echo Sound.Controls.play
@@ -159,7 +160,7 @@ goto SwitchMusic
 echo stopping my music :(
 Taskkill  /F /IM wscript.exe
 echo ---------------------------------------------------------------  
-goto end
+goto SwitchMusic
 
 :End 
 echo ---------------------------------------------------------------
